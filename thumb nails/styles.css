@@ -1,0 +1,89 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding-top: 80px;
+    padding-left: 100px;
+    padding-right: 30px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Variables for Light Mode */
+:root {
+    --background-color: rgb(248, 248, 248);
+    --text-color: rgb(0, 0, 0);
+}
+
+/* Dark Mode Variables */
+body.dark-mode {
+    --background-color: rgb(32, 32, 32);
+    --text-color: rgb(255, 255, 255);
+}
+
+/* Header Styles */
+.header {
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-bottom: 1px solid rgb(222, 222, 222);
+    z-index: 100;
+}
+
+/* Theme Toggle Switch */
+.theme-toggle {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+/* Additional Styles for dark-mode can be added here */
